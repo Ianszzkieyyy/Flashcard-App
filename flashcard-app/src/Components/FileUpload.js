@@ -5,7 +5,7 @@ import Papa from 'papaparse';
 
 export const FileUpload = () => {
     const { register, handleSubmit } = useForm();
-    const setInputFile = useContext(AppContext)
+    const [, setInputFile] = useContext(AppContext);
 
     const onSubmit = async (data) => {
         const selectedFile = data.inputCSV[0];
